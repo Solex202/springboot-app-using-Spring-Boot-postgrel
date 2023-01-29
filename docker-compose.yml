@@ -1,9 +1,21 @@
+version: '3.5'
+
 services:
   postgres:
-    image: postgres:latest
+    image: "postgres:13"
     environment:
       POSTGRES_DB: mydb
-      POSTGRES_USER: myuser
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: solomon12
     ports:
       - "5432:5432"
+  app:
+    container_name: online-book-tracking-system
+    image: online-book-tracking-system
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+#    environment:
+
