@@ -9,13 +9,13 @@ services:
       POSTGRES_PASSWORD: solomon12
     ports:
       - "5432:5432"
-  app:
-    container_name: online-book-tracking-system
-    image: online-book-tracking-system
-    build: ./
-    ports:
-      - "8080:8080"
-    depends_on:
-      - postgres
-#    environment:
+#  app:
+#    container_name: online-book-tracking-system
+#    image: online-book-tracking-system
+#    build: ./
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - postgres
+##    environment:
 
